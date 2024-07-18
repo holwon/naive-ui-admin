@@ -16,9 +16,11 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "lib": [
       "dom",
-      "esnext"
+      "esnext",
+      "es6"
     ],
     "typeRoots": [
       "./node_modules/@types/",

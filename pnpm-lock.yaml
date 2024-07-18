@@ -35,6 +35,9 @@ importers:
       element-resize-detector:
         specifier: ^1.2.4
         version: 1.2.4
+      inversify:
+        specifier: ^6.0.2
+        version: 6.0.2
       lodash-es:
         specifier: ^4.17.21
         version: 4.17.21
@@ -53,6 +56,9 @@ importers:
       qs:
         specifier: ^6.12.1
         version: 6.12.1
+      reflect-metadata:
+        specifier: ^0.2.2
+        version: 0.2.2
       vfonts:
         specifier: ^0.0.3
         version: 0.0.3
@@ -85,11 +91,11 @@ importers:
         specifier: ^5.62.0
         version: 5.62.0(eslint@8.57.0)(typescript@4.9.5)
       '@vitejs/plugin-vue':
-        specifier: ^3.2.0
-        version: 3.2.0(vite@5.3.2(@types/node@18.19.39)(less@4.2.0)(terser@5.31.1))(vue@3.4.31(typescript@4.9.5))
+        specifier: ^5.0.5
+        version: 5.0.5(vite@5.3.2(@types/node@18.19.39)(less@4.2.0)(terser@5.31.1))(vue@3.4.31(typescript@4.9.5))
       '@vitejs/plugin-vue-jsx':
-        specifier: ^2.1.1
-        version: 2.1.1(vite@5.3.2(@types/node@18.19.39)(less@4.2.0)(terser@5.31.1))(vue@3.4.31(typescript@4.9.5))
+        specifier: ^4.0.0
+        version: 4.0.0(vite@5.3.2(@types/node@18.19.39)(less@4.2.0)(terser@5.31.1))(vue@3.4.31(typescript@4.9.5))
       '@vue/compiler-sfc':
         specifier: ^3.4.31
         version: 3.4.31
@@ -1013,55 +1019,46 @@ packages:
     resolution: {integrity: sha512-C/zbRYRXFjWvz9Z4haRxcTdnkPt1BtCkz+7RtBSuNmKzMzp3ZxdM28Mpccn6pt28/UWUCTXa+b0Mx1k3g6NOMA==}
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm-musleabihf@4.18.0':
     resolution: {integrity: sha512-l3m9ewPgjQSXrUMHg93vt0hYCGnrMOcUpTz6FLtbwljo2HluS4zTXFy2571YQbisTnfTKPZ01u/ukJdQTLGh9A==}
     cpu: [arm]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-arm64-gnu@4.18.0':
     resolution: {integrity: sha512-rJ5D47d8WD7J+7STKdCUAgmQk49xuFrRi9pZkWoRD1UeSMakbcepWXPF8ycChBoAqs1pb2wzvbY6Q33WmN2ftw==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm64-musl@4.18.0':
     resolution: {integrity: sha512-be6Yx37b24ZwxQ+wOQXXLZqpq4jTckJhtGlWGZs68TgdKXJgw54lUUoFYrg6Zs/kjzAQwEwYbp8JxZVzZLRepQ==}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-powerpc64le-gnu@4.18.0':
     resolution: {integrity: sha512-hNVMQK+qrA9Todu9+wqrXOHxFiD5YmdEi3paj6vP02Kx1hjd2LLYR2eaN7DsEshg09+9uzWi2W18MJDlG0cxJA==}
     cpu: [ppc64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-gnu@4.18.0':
     resolution: {integrity: sha512-ROCM7i+m1NfdrsmvwSzoxp9HFtmKGHEqu5NNDiZWQtXLA8S5HBCkVvKAxJ8U+CVctHwV2Gb5VUaK7UAkzhDjlg==}
     cpu: [riscv64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-s390x-gnu@4.18.0':
     resolution: {integrity: sha512-0UyyRHyDN42QL+NbqevXIIUnKA47A+45WyasO+y2bGJ1mhQrfrtXUpTxCOrfxCR4esV3/RLYyucGVPiUsO8xjg==}
     cpu: [s390x]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-gnu@4.18.0':
     resolution: {integrity: sha512-xuglR2rBVHA5UsI8h8UbX4VJ470PtGCf5Vpswh7p2ukaqBGFTnsfzxUBetoWBWymHMxbIG0Cmx7Y9qDZzr648w==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-musl@4.18.0':
     resolution: {integrity: sha512-LKaqQL9osY/ir2geuLVvRRs+utWUNilzdE90TpyoX0eNqPzWjRm14oMEE+YLve4k/NAqCdPkGYDaDF5Sw+xBfg==}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-win32-arm64-msvc@4.18.0':
     resolution: {integrity: sha512-7J6TkZQFGo9qBKH0pk2cEVSRhJbL6MtfWxth7Y5YmZs57Pi+4x6c2dStAUvaQkHQLnEQv1jzBUW43GvZW8OFqA==}
@@ -1247,18 +1244,18 @@ packages:
   '@vicons/ionicons5@0.12.0':
     resolution: {integrity: sha512-Iy1EUVRpX0WWxeu1VIReR1zsZLMc4fqpt223czR+Rpnrwu7pt46nbnC2ycO7ItI/uqDLJxnbcMC7FujKs9IfFA==}
 
-  '@vitejs/plugin-vue-jsx@2.1.1':
-    resolution: {integrity: sha512-JgDhxstQlwnHBvZ1BSnU5mbmyQ14/t5JhREc6YH5kWyu2QdAAOsLF6xgHoIWarj8tddaiwFrNzLbWJPudpXKYA==}
-    engines: {node: ^14.18.0 || >=16.0.0}
+  '@vitejs/plugin-vue-jsx@4.0.0':
+    resolution: {integrity: sha512-A+6wL2AdQhDsLsDnY+2v4rRDI1HLJGIMc97a8FURO9tqKsH5QvjWrzsa5DH3NlZsM742W2wODl2fF+bfcTWtXw==}
+    engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
-      vite: ^3.0.0
+      vite: ^5.0.0
       vue: ^3.0.0
 
-  '@vitejs/plugin-vue@3.2.0':
-    resolution: {integrity: sha512-E0tnaL4fr+qkdCNxJ+Xd0yM31UwMkQje76fsDVBBUCoGOUPexu2VDUYHL8P4CwV+zMvWw6nlRw19OnRKmYAJpw==}
-    engines: {node: ^14.18.0 || >=16.0.0}
+  '@vitejs/plugin-vue@5.0.5':
+    resolution: {integrity: sha512-LOjm7XeIimLBZyzinBQ6OSm3UBCNVCpLkxGC0oWmm2YPzVZoxMsdvNVimLTBzpAnR9hl/yn1SHGuRfe6/Td9rQ==}
+    engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
-      vite: ^3.0.0
+      vite: ^5.0.0
       vue: ^3.2.25
 
   '@vue/babel-helper-vue-transform-on@1.2.2':
@@ -2797,6 +2794,9 @@ packages:
     resolution: {integrity: sha512-QAgPDQMEgrDssk1XiwwHoOGYF9BAbUcc1+j+FhEvaOt8/cKRqyLn0U5qA6F74fGhTMGxf92pOvPBeh29jQJDTQ==}
     engines: {node: '>=12.0.0'}
 
+  inversify@6.0.2:
+    resolution: {integrity: sha512-i9m8j/7YIv4mDuYXUAcrpKPSaju/CIly9AHK5jvCBeoiM/2KEsuCQTTP+rzSWWpLYWRukdXFSl6ZTk2/uumbiA==}
+
   is-arguments@1.1.1:
     resolution: {integrity: sha512-8Q7EARjzEnKpt/PCD7e1cgUS0a6X8u5tdSiMqXhojOdoV9TsMsiO+9VLC5vAmO8N7/GmXn7yjR8qnA6bVAEzfA==}
     engines: {node: '>= 0.4'}
@@ -3796,6 +3796,9 @@ packages:
   redent@3.0.0:
     resolution: {integrity: sha512-6tDA8g98We0zd0GvVeMT9arEOnTw9qM03L9cJXaCjrip1OO764RDBLBfrB4cwzNGDj5OA5ioymC9GkizgWJDUg==}
     engines: {node: '>=8'}
+
+  reflect-metadata@0.2.2:
+    resolution: {integrity: sha512-urBwgfrvVP/eAyXx4hluJivBKzuEbSQs9rKWCrCkbSxNv8mxPcUZKeuoF3Uy4mJl3Lwprp6yy5/39VWigZ4K6Q==}
 
   regenerator-runtime@0.14.1:
     resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
@@ -5696,7 +5699,7 @@ snapshots:
 
   '@vicons/ionicons5@0.12.0': {}
 
-  '@vitejs/plugin-vue-jsx@2.1.1(vite@5.3.2(@types/node@18.19.39)(less@4.2.0)(terser@5.31.1))(vue@3.4.31(typescript@4.9.5))':
+  '@vitejs/plugin-vue-jsx@4.0.0(vite@5.3.2(@types/node@18.19.39)(less@4.2.0)(terser@5.31.1))(vue@3.4.31(typescript@4.9.5))':
     dependencies:
       '@babel/core': 7.24.7
       '@babel/plugin-transform-typescript': 7.24.7(@babel/core@7.24.7)
@@ -5706,7 +5709,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-vue@3.2.0(vite@5.3.2(@types/node@18.19.39)(less@4.2.0)(terser@5.31.1))(vue@3.4.31(typescript@4.9.5))':
+  '@vitejs/plugin-vue@5.0.5(vite@5.3.2(@types/node@18.19.39)(less@4.2.0)(terser@5.31.1))(vue@3.4.31(typescript@4.9.5))':
     dependencies:
       vite: 5.3.2(@types/node@18.19.39)(less@4.2.0)(terser@5.31.1)
       vue: 3.4.31(typescript@4.9.5)
@@ -7402,6 +7405,8 @@ snapshots:
       through: 2.3.8
       wrap-ansi: 7.0.0
 
+  inversify@6.0.2: {}
+
   is-arguments@1.1.1:
     dependencies:
       call-bind: 1.0.7
@@ -8559,6 +8564,8 @@ snapshots:
     dependencies:
       indent-string: 4.0.0
       strip-indent: 3.0.0
+
+  reflect-metadata@0.2.2: {}
 
   regenerator-runtime@0.14.1: {}
 
