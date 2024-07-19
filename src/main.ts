@@ -5,6 +5,7 @@ import { setupNaiveDiscreteApi, setupNaive, setupDirectives } from '@/plugins';
 import App from './App.vue';
 import router, { setupRouter } from './router';
 import { setupStore } from '@/store';
+import { container } from './inversify.config';
 
 async function bootstrap() {
   const app = createApp(App);
@@ -38,6 +39,9 @@ async function bootstrap() {
   const meta = document.createElement('meta');
   meta.name = 'naive-ui-style';
   document.head.appendChild(meta);
+
+  // 提供 Inversify 容器
+  app.provide('container', container);
 
   app.mount('#app', true);
 }
